@@ -1,9 +1,0 @@
-C:\Users\Justine\source\repos\xmodem-protocol-application\xmodem-protocol-application\bin\Debug\xmodem-protocol-application.exe
-C:\Users\Justine\source\repos\xmodem-protocol-application\xmodem-protocol-application\bin\Debug\xmodem-protocol-application.pdb
-C:\Users\Justine\source\repos\xmodem-protocol-application\xmodem-protocol-application\obj\Debug\xmodem-protocol-application.csprojAssemblyReference.cache
-C:\Users\Justine\source\repos\xmodem-protocol-application\xmodem-protocol-application\obj\Debug\xmodem_protocol_application.Form1.resources
-C:\Users\Justine\source\repos\xmodem-protocol-application\xmodem-protocol-application\obj\Debug\xmodem_protocol_application.Properties.Resources.resources
-C:\Users\Justine\source\repos\xmodem-protocol-application\xmodem-protocol-application\obj\Debug\xmodem-protocol-application.csproj.GenerateResource.cache
-C:\Users\Justine\source\repos\xmodem-protocol-application\xmodem-protocol-application\obj\Debug\xmodem-protocol-application.csproj.CoreCompileInputs.cache
-C:\Users\Justine\source\repos\xmodem-protocol-application\xmodem-protocol-application\obj\Debug\xmodem-protocol-application.exe
-C:\Users\Justine\source\repos\xmodem-protocol-application\xmodem-protocol-application\obj\Debug\xmodem-protocol-application.pdb
