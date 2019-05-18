@@ -44,7 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ReceiverStates\CRC16Calculator.cs" />
+    <Compile Include="ReceiverStates\CRC16ReceiverCalculator.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,10 +54,12 @@
     <Compile Include="ReceiverStates\InitialReceiverState.cs" />
     <Compile Include="ReceiverStates\InitialReceiverStateCRC.cs" />
     <Compile Include="ReceiverStates\ReceiverState.cs" />
+    <Compile Include="TransmitterStates\CRC16TransmitterCalculator.cs" />
     <Compile Include="TransmitterStates\InitialTransmitterState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TransmitterStates\SendingTransmitterState.cs" />
+    <Compile Include="TransmitterStates\SendingTransmitterStateCRC.cs" />
     <Compile Include="TransmitterStates\TransmitterState.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

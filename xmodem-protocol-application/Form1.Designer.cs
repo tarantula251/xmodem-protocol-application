@@ -63,7 +63,7 @@
             // labelPort1
             // 
             this.labelPort1.AutoSize = true;
-            this.labelPort1.Location = new System.Drawing.Point(38, 50);
+            this.labelPort1.Location = new System.Drawing.Point(16, 141);
             this.labelPort1.Name = "labelPort1";
             this.labelPort1.Size = new System.Drawing.Size(96, 13);
             this.labelPort1.TabIndex = 0;
@@ -72,7 +72,7 @@
             // labelPort2
             // 
             this.labelPort2.AutoSize = true;
-            this.labelPort2.Location = new System.Drawing.Point(336, 50);
+            this.labelPort2.Location = new System.Drawing.Point(314, 141);
             this.labelPort2.Name = "labelPort2";
             this.labelPort2.Size = new System.Drawing.Size(84, 13);
             this.labelPort2.TabIndex = 1;
@@ -80,14 +80,14 @@
             // 
             // textBoxPort1
             // 
-            this.textBoxPort1.Location = new System.Drawing.Point(41, 68);
+            this.textBoxPort1.Location = new System.Drawing.Point(19, 159);
             this.textBoxPort1.Name = "textBoxPort1";
             this.textBoxPort1.Size = new System.Drawing.Size(175, 20);
             this.textBoxPort1.TabIndex = 2;
             // 
             // textBoxPort2
             // 
-            this.textBoxPort2.Location = new System.Drawing.Point(339, 68);
+            this.textBoxPort2.Location = new System.Drawing.Point(317, 159);
             this.textBoxPort2.Name = "textBoxPort2";
             this.textBoxPort2.Size = new System.Drawing.Size(175, 20);
             this.textBoxPort2.TabIndex = 3;
@@ -95,7 +95,7 @@
             // listBoxReceivedDataPort1
             // 
             this.listBoxReceivedDataPort1.FormattingEnabled = true;
-            this.listBoxReceivedDataPort1.Location = new System.Drawing.Point(41, 138);
+            this.listBoxReceivedDataPort1.Location = new System.Drawing.Point(19, 229);
             this.listBoxReceivedDataPort1.Name = "listBoxReceivedDataPort1";
             this.listBoxReceivedDataPort1.Size = new System.Drawing.Size(254, 134);
             this.listBoxReceivedDataPort1.TabIndex = 4;
@@ -103,7 +103,7 @@
             // listBoxReceivedDataPort2
             // 
             this.listBoxReceivedDataPort2.FormattingEnabled = true;
-            this.listBoxReceivedDataPort2.Location = new System.Drawing.Point(339, 138);
+            this.listBoxReceivedDataPort2.Location = new System.Drawing.Point(317, 229);
             this.listBoxReceivedDataPort2.Name = "listBoxReceivedDataPort2";
             this.listBoxReceivedDataPort2.Size = new System.Drawing.Size(254, 134);
             this.listBoxReceivedDataPort2.TabIndex = 5;
@@ -111,7 +111,7 @@
             // labelReceivedDataPort1
             // 
             this.labelReceivedDataPort1.AutoSize = true;
-            this.labelReceivedDataPort1.Location = new System.Drawing.Point(38, 108);
+            this.labelReceivedDataPort1.Location = new System.Drawing.Point(16, 199);
             this.labelReceivedDataPort1.Name = "labelReceivedDataPort1";
             this.labelReceivedDataPort1.Size = new System.Drawing.Size(123, 13);
             this.labelReceivedDataPort1.TabIndex = 6;
@@ -120,7 +120,7 @@
             // labelReceivedDataPort2
             // 
             this.labelReceivedDataPort2.AutoSize = true;
-            this.labelReceivedDataPort2.Location = new System.Drawing.Point(336, 108);
+            this.labelReceivedDataPort2.Location = new System.Drawing.Point(314, 199);
             this.labelReceivedDataPort2.Name = "labelReceivedDataPort2";
             this.labelReceivedDataPort2.Size = new System.Drawing.Size(123, 13);
             this.labelReceivedDataPort2.TabIndex = 7;
@@ -128,21 +128,21 @@
             // 
             // textBoxInputData1
             // 
-            this.textBoxInputData1.Location = new System.Drawing.Point(41, 13);
+            this.textBoxInputData1.Location = new System.Drawing.Point(19, 103);
             this.textBoxInputData1.Name = "textBoxInputData1";
             this.textBoxInputData1.Size = new System.Drawing.Size(175, 20);
             this.textBoxInputData1.TabIndex = 8;
             // 
             // textBoxInputData2
             // 
-            this.textBoxInputData2.Location = new System.Drawing.Point(339, 12);
+            this.textBoxInputData2.Location = new System.Drawing.Point(317, 103);
             this.textBoxInputData2.Name = "textBoxInputData2";
             this.textBoxInputData2.Size = new System.Drawing.Size(175, 20);
             this.textBoxInputData2.TabIndex = 9;
             // 
             // buttonOpenConnection1
             // 
-            this.buttonOpenConnection1.Location = new System.Drawing.Point(222, 67);
+            this.buttonOpenConnection1.Location = new System.Drawing.Point(200, 158);
             this.buttonOpenConnection1.Name = "buttonOpenConnection1";
             this.buttonOpenConnection1.Size = new System.Drawing.Size(73, 20);
             this.buttonOpenConnection1.TabIndex = 10;
@@ -152,7 +152,7 @@
             // 
             // buttonOpenConnection2
             // 
-            this.buttonOpenConnection2.Location = new System.Drawing.Point(520, 68);
+            this.buttonOpenConnection2.Location = new System.Drawing.Point(498, 159);
             this.buttonOpenConnection2.Name = "buttonOpenConnection2";
             this.buttonOpenConnection2.Size = new System.Drawing.Size(73, 20);
             this.buttonOpenConnection2.TabIndex = 11;
@@ -162,7 +162,7 @@
             // 
             // buttonBrowseFile
             // 
-            this.buttonBrowseFile.Location = new System.Drawing.Point(222, 13);
+            this.buttonBrowseFile.Location = new System.Drawing.Point(200, 104);
             this.buttonBrowseFile.Name = "buttonBrowseFile";
             this.buttonBrowseFile.Size = new System.Drawing.Size(73, 20);
             this.buttonBrowseFile.TabIndex = 12;
@@ -172,7 +172,7 @@
             // 
             // buttonBrowseData2
             // 
-            this.buttonBrowseData2.Location = new System.Drawing.Point(520, 12);
+            this.buttonBrowseData2.Location = new System.Drawing.Point(498, 103);
             this.buttonBrowseData2.Name = "buttonBrowseData2";
             this.buttonBrowseData2.Size = new System.Drawing.Size(73, 20);
             this.buttonBrowseData2.TabIndex = 13;
@@ -183,7 +183,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(613, 138);
+            this.radioButton1.Location = new System.Drawing.Point(19, 44);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(75, 17);
             this.radioButton1.TabIndex = 14;
@@ -195,16 +195,16 @@
             // labelChooseByteControl
             // 
             this.labelChooseByteControl.AutoSize = true;
-            this.labelChooseByteControl.Location = new System.Drawing.Point(610, 108);
+            this.labelChooseByteControl.Location = new System.Drawing.Point(16, 21);
             this.labelChooseByteControl.Name = "labelChooseByteControl";
-            this.labelChooseByteControl.Size = new System.Drawing.Size(104, 13);
+            this.labelChooseByteControl.Size = new System.Drawing.Size(142, 13);
             this.labelChooseByteControl.TabIndex = 15;
-            this.labelChooseByteControl.Text = "Choose byte control:";
+            this.labelChooseByteControl.Text = "Choose byte control method:";
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(613, 161);
+            this.radioButton2.Location = new System.Drawing.Point(19, 67);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(59, 17);
             this.radioButton2.TabIndex = 16;
@@ -217,7 +217,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 321);
+            this.ClientSize = new System.Drawing.Size(607, 396);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.labelChooseByteControl);
             this.Controls.Add(this.radioButton1);

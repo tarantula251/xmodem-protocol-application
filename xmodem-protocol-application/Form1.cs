@@ -70,18 +70,32 @@ namespace xmodem_protocol_application
                 transmitterState.initialize(this);
             }
         }
+
         private ReceiverState receiverState = new InitialReceiverState();
+        private ReceiverState receiverStateCRC = new InitialReceiverStateCRC();
         public ReceiverState StateReceiver
         {
             get
             {
-                return receiverState;
+                if (checkSumChoice)
+                    return receiverState;
+                else
+                    return receiverStateCRC;
             }
 
             set
             {
-                receiverState = value;
-                receiverState.initialize(this);
+                if (checkSumChoice)
+                {
+                    receiverState = value;
+                    receiverState.initialize(this);
+                }
+                else
+                {
+                    receiverStateCRC = value;
+                    receiverStateCRC.initialize(this);
+                }
+
             }
         }
 
@@ -131,8 +145,15 @@ namespace xmodem_protocol_application
                 serialPort2.Open();
                 if (serialPort2.IsOpen)
                 {
-                    receiverState.initialize(this);
-                    listBoxReceivedDataPort2.Items.Add("Port " + serialPort2.PortName + " is open.");
+                    if (checkSumChoice)
+                    {
+                        receiverState.initialize(this);
+                    }
+                    else
+                    {
+                        receiverStateCRC.initialize(this);
+                    }
+                    listBoxReceivedDataPort2.Items.Add("Port " + serialPort2.PortName + " is open.");               
                 }
             }
             catch (System.ArgumentException exception)
@@ -149,7 +170,11 @@ namespace xmodem_protocol_application
 
         private void serialPort2_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            receiverState.handleSignal(this, (byte)serialPort2.ReadByte());
+            if (checkSumChoice)
+                receiverState.handleSignal(this, (byte)serialPort2.ReadByte());
+            else
+                receiverStateCRC.handleSignal(this, (byte)serialPort2.ReadByte());
+
         }
 
         private void buttonBrowseFile_Click(object sender, EventArgs e)

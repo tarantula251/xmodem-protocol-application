@@ -5,30 +5,30 @@ using System.Text;
 
 namespace xmodem_protocol_application
 {
-    public class CRC16Calculator
+    public class CRC16ReceiverCalculator
     {
         const ushort polynomial = 0xA001;
-        static readonly ushort[] table = new ushort[256];
+        ushort[] table = new ushort[256];
 
-        public static ushort ComputeCRCChecksum(byte[] bytes)
+        public ushort ComputeCRCChecksum(byte[] bytes)
         {
-            Console.WriteLine("Input: " + bytes);
-            Console.WriteLine("Input Length: " + bytes.Length);
-
-
             ushort crc = 0;
             for (int i = 0; i < bytes.Length; ++i)
             {
                 byte index = (byte)(crc ^ bytes[i]);
                 crc = (ushort)((crc >> 8) ^ table[index]);
             }
-
-            Console.WriteLine("crc: " + crc);
-
             return crc;
         }
 
-        private static void Crc16()
+        public byte[] ComputeCRCChecksumBytes(byte[] bytes)
+        {
+            ushort crc = ComputeCRCChecksum(bytes);
+            byte[] result = BitConverter.GetBytes(crc);
+            return BitConverter.GetBytes(crc);
+        }
+
+        public CRC16ReceiverCalculator()
         {
             ushort value;
             ushort temp;

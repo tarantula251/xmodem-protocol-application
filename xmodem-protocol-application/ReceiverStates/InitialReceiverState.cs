@@ -51,15 +51,13 @@ namespace xmodem_protocol_application.ReceiverStates
                 int readBytesNumber = form.serialPort2.Read(readBuffer, 0, readBuffer.Length);
 
                 form1.writeToReceiverConsole("readBytesNumber " + readBytesNumber);
-                /* int checkSum = 0;
+                int checkSum = 0;
 
-                 for (int i = 0; i < readBytesNumber - 1; i++)
-                 {
-                     checkSum += readBuffer[i];
-                 }
-                 checkSum %= 256;*/
-                ushort checkSum = CRC16Calculator.ComputeCRCChecksum(readBuffer);
-                form1.writeToReceiverConsole("Computed CRCSum: " + checkSum);
+                for (int i = 0; i < readBytesNumber - 1; i++)
+                {
+                    checkSum += readBuffer[i];
+                }
+                checkSum %= 256;
 
                 if (checkSum != readBuffer[readBytesNumber - 1])
                 {

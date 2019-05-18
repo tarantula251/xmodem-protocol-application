@@ -47,16 +47,16 @@ namespace xmodem_protocol_application.ReceiverStates
                     form1.serialPort2.DiscardInBuffer();
                     return;
                 }
-                byte[] readBuffer = new byte[129];
+                byte[] readBuffer = new byte[130];
                 int readBytesNumber = form.serialPort2.Read(readBuffer, 0, readBuffer.Length);
 
-                form1.writeToReceiverConsole("readBytesNumber " + readBytesNumber);
-                ushort crcCheckSum = CRC16Calculator.ComputeCRCChecksum(readBuffer);
-                form1.writeToReceiverConsole("Computed CRCSum: " + crcCheckSum);
+                CRC16ReceiverCalculator calculator = new CRC16ReceiverCalculator();
+                byte[] readBufferToCalculate = new byte[readBytesNumber - 2];
+                Array.Copy(readBuffer, 0, readBufferToCalculate, 0, readBytesNumber - 2);
 
+                byte[] crcCheckSumReceiver = calculator.ComputeCRCChecksumBytes(readBufferToCalculate);
 
-
-                if (crcCheckSum != readBuffer[readBytesNumber - 1])
+                if (crcCheckSumReceiver[0] != readBuffer[readBytesNumber - 2] || crcCheckSumReceiver[1] != readBuffer[readBytesNumber - 1])
                 {
                     sendSignal(Form1.NAK);
                     form1.writeToReceiverConsole("Wrong checksum - NAK sent.");
@@ -65,7 +65,7 @@ namespace xmodem_protocol_application.ReceiverStates
                 }
                 else
                 {
-                    form1.OutputFile.Write(readBuffer, 0, readBytesNumber - 1);
+                    form1.OutputFile.Write(readBuffer, 0, readBytesNumber - 2);
                     sendSignal(Form1.ACK);
                     form1.writeToReceiverConsole("ACK sent.");
                 }
