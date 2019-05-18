@@ -50,9 +50,7 @@ namespace xmodem_protocol_application.ReceiverStates
                 byte[] readBuffer = new byte[129];                   
                 int readBytesNumber = form.serialPort2.Read(readBuffer, 0, readBuffer.Length);
 
-                form1.writeToReceiverConsole("readBytesNumber " + readBytesNumber);
                 int checkSum = 0;
-
                 for (int i = 0; i < readBytesNumber - 1; i++)
                 {
                     checkSum += readBuffer[i];

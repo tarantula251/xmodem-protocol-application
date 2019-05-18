@@ -15,8 +15,6 @@ namespace xmodem_protocol_application.TransmitterStates
 
         private void sendDataPackage(Form1 form1, FileStream fileStream)
         {
-            form1.writeToTransmitterConsole("inputBytesCount " + inputBytesCount);
-
             byte[] writeBuffer = new byte[inputBytesCount + 4];
             writeBuffer[0] = Form1.SOH;
             writeBuffer[1] = packetCounter;
